@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+/*shorthand para fundo com imagens
+    valores:
+        1-background-color
+        2-endereço da imagem (pasta,caminho ou link externo)
+        3-background-repeat
+        4-background-attachment
+        5-background-position*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: 'impact';
+    src: url(../fontes/Impacted.ttf) format(truetype);
+}
+
+body {
+    height: 200%;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+nav {
+    background-color: black;
+    position: relative;
+    padding: 10px;
+    color: white;
+    position: relative;
+    font-family: 'impact';
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(168, 165, 165);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 330px;
+    margin-left: 160px;
+}
+
+ul>li {
+    text-align: center;
+    margin: 0px 5px;
+    color: rgb(168, 165, 165);
+    font-size: 0.75em;
+    padding: 0 .5rem;
+    min-width: 1.24rem;
+    border-radius: 1.2rem;
+    transition: 0.6s;
+}
+
+ul>li:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.12);
+}
+
+a.drop {
+    position: relative;
+    font-size: 0.75em;
+    border-radius: 1.14rem;
+    transition: 0.8s;
+}
+
+div.dropdown {
+    display: none;
+    position: absolute;
+    left: -20px;
+    background-color: black;
+    padding: 2px;
+    width: 75px;
+    border-top: 4px solid #D8FA00;
+    font-size: 0.8em;
+
+}
+
+div.dropdown li {
+    padding: 6px;
+}
+
+div.dropdown li:hover {
+    transition: 0.6s;
+    background-color: rgba(131, 131, 131, 0.527);
+}
+
+a.drop:hover .dropdown {
+    display: block;
+}
+
+img#logo {
+    position: absolute;
+    top: 50%;
+    left: 130px;
+    transform: translate(-80%, -50%);
+    width: 90px;
+}
+
+main {
+    margin: -10px;
+}
+
+div#tela {
+    height: 350px;
+    position: relative;
+    z-index: -1;
+}
+
+img.poligono {
+    position: absolute;
+    z-index: -1;
+}
+
+img#verde {
+    width: 400px;
+    left: -185px;
+    top: 90px;
+}
+
+img#preto {
+    width: 500px;
+    top: -11px;
+    left: -63px;
+}
+
+div.descricao {
+    position: absolute;
+    top: 142px;
+    left: 20px;
+    font-family: 'impact';
+}
+h3.num{
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+div.logo-comissoes {
+    width: 500px;
+    display: flex;
+    margin: auto;
+}
+
+div.carrossel {
+    transition: transform 0.8s ease-in-out;
+    transform: translateX(0);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+div.logo-comissoes img {
+    background-image: url(../imagens/camp-active.6413dab.png);
+    width: 250px;
+    border: none;
+    display: block;
+    object-fit: cover;
+}
